@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links for fonts/APIs -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Ubuntu+Condensed&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/61d3f7ece8.js" crossorigin="anonymous"></script>
+
+    <!-- CSS Style sheets -->
+    <link rel="stylesheet" href="{% static 'styles/common.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/homepage.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/vehicle-sales.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/contact-tab.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/footer.css' %}">
+
+
+    {% block head_content %}
+    
+        <!-- Page specific head content -->
+
+    {% endblock %}
+
+</head>
+<body>
+
+    <!-- Include nav menu -->
+    {% include 'nav.html' %}
+
+    <!-- Include contact tab -->
+    {% include 'contact_tab.html' %}
+
+    <!-- Main body content -->
+    {% block content %}
+
+        <!-- Page specific info -->
+
+    {% endblock %}
+
+    <!-- Include footer -->
+    {% include 'footer.html' %}
+    
+</body>
+</html>

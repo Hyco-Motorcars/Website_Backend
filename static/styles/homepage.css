@@ -1,0 +1,21 @@
+/* Parallax image section */
+.parallax-section {
+    background-image: url(../images/background/land_rover.jpg);
+    width: 100vw;
+    height: 1000px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax-section > .main-video-container {
+    width: 90vw;
+}
+
+.parallax-section > .main-video-container > .main-video {
+    width: 100%;
+}

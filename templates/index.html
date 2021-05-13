@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block head_content %}
+
+<title>Homepage</title>
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Main body -->
+<div class="parallax-section">
+    <div class="main-video-container">
+        <p>
+            {{ object.make }},
+            {{ object.model }}
+        </p>
+    </div>
+</div>
+
+{% endblock %}

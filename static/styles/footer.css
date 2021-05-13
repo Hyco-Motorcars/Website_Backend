@@ -1,0 +1,47 @@
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 190px;
+    width: 100vw;
+    background-color: #D2232A;
+    box-shadow: inset 0px -26px 79px -8px rgba(0, 0, 0, 0.58);
+    position: absolute;
+}
+
+.footer-wrapper > .left-column {
+    margin: 0px 50px;
+}
+
+.footer-wrapper > .left-column > .logo-image-sec img {
+    width: 150px;
+    height: 100%;
+    opacity: 0.7;
+}
+
+.footer-wrapper > .right-column {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-wrapper > .right-column > .social-media-icon-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px 50px;
+}
+
+.footer-wrapper > .right-column > .social-media-icon-wrapper > .social-media-icon {
+    padding: 0px 20px;
+}
+
+.footer-wrapper > .right-column > .social-media-icon-wrapper > .social-media-icon a {
+    font-size: 2em;
+    color: #F4F3F3;
+    transition: color 0.3s;
+}
+
+.footer-wrapper > .right-column > .social-media-icon-wrapper > .social-media-icon a:hover {
+    color: #cea135;
+}

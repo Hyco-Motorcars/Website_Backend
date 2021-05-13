@@ -1,0 +1,285 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head_content %}
+
+<title>Vehicle Sales</title>
+
+{% endblock %}
+
+{% block content %}
+<!-- Sales page content -->
+<div class="body-heading-wrapper-collection">
+    <div class="heading-tab-collection">
+        <h1>Vehicle Sales</h1>
+    </div>
+</div>
+
+<div class="car-list-section">
+    <div class="car-list-grid">
+
+        {% for vehicle in all_vehicles %}
+        <div class="car-collection-cards-wrapper">
+            <div class="car-flip-card">
+                <div class="car-flip-card-front">
+                    <div class="card-image-section">
+                        <a href="../cars_html/car.html">
+                            <h1>See Details</h1>
+                        </a>
+                    </div>
+
+                    <div class="car-specs-section">
+                        <ul>
+                            <li>Make: {{ vehicle.make }}</li>
+                            <li>Model: {{ vehicle.model }}</li>
+                            <li>Year: {{ vehicle.year }}</li>
+                            <li>Color: {{ vehicle.exterior_color }}</li>
+                            <li>Interior: {{ vehicle.interior }}</li>
+                            <li>Price: {{ vehicle.listing_price }}</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-button-section">
+                        <button id="card-button-front" class="card-button-front">See History</button>
+                    </div>
+                </div>
+
+                <div class="car-flip-card-back">
+
+                    <div class="card-back-text-section">
+                        <h1 class="card-back-heading">History</h1>
+
+                        <p class="card-back-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium voluptatibus nobis corporis similique repellat autem quas soluta iste repellendus fugit veritatis quis, commodi temporibus aspernatur neque placeat id atque modi?</p>
+                    </div>
+
+                    <div class="card-button-section">
+                        <button id="card-button-back" class="card-button-back">See Info</button>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        {% endfor %}
+        <!-- <div class="car-collection-cards-wrapper">
+            <div class="car-flip-card">
+                <div class="car-flip-card-front">
+                    <div class="card-image-section">
+                        <a href="../cars_html/car.html">
+                            <h1>See More</h1>
+                        </a>
+                    </div>
+
+                    <div class="car-specs-section">
+                        <ul>
+                            <li>Make: Chevrolet</li>
+                            <li>Model: Corvette</li>
+                            <li>Year: 1995</li>
+                            <li>Color: Red</li>
+                            <li>Price: $100/day</li>
+                            <li>Rental Type: Events, Driving</li>
+                            <li>Availability: Available</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-button-section">
+                        <button id="card-button-front" class="card-button-front">History</button>
+                    </div>
+                </div>
+
+                <div class="car-flip-card-back">
+
+                    <div class="card-back-text-section">
+                        <h1 class="card-back-heading">History</h1>
+
+                        <p class="card-back-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium voluptatibus nobis corporis similique repellat autem quas soluta iste repellendus fugit veritatis quis, commodi temporibus aspernatur neque placeat id atque modi?</p>
+                    </div>
+
+                    <div class="card-button-section">
+                        <button id="card-button-back" class="card-button-back">Car Specs</button>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+
+        <div class="car-collection-cards-wrapper">
+            <div class="car-flip-card">
+                <div class="car-flip-card-front">
+                    <div class="card-image-section">
+                        <a href="../cars_html/car.html">
+                            <h1>See More</h1>
+                        </a>
+                    </div>
+
+                    <div class="car-specs-section">
+                        <ul>
+                            <li>Make: Chevrolet</li>
+                            <li>Model: Corvette</li>
+                            <li>Year: 1995</li>
+                            <li>Color: Red</li>
+                            <li>Price: $100/day</li>
+                            <li>Rental Type: Events, Driving</li>
+                            <li>Availability: Available</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-button-section">
+                        <button id="card-button-front" class="card-button-front">History</button>
+                    </div>
+                </div>
+
+                <div class="car-flip-card-back">
+
+                    <div class="card-back-text-section">
+                        <h1 class="card-back-heading">History</h1>
+
+                        <p class="card-back-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium voluptatibus nobis corporis similique repellat autem quas soluta iste repellendus fugit veritatis quis, commodi temporibus aspernatur neque placeat id atque modi?</p>
+                    </div>
+
+                    <div class="card-button-section">
+                        <button id="card-button-back" class="card-button-back">Car Specs</button>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+
+        <div class="car-collection-cards-wrapper">
+            <div class="car-flip-card">
+                <div class="car-flip-card-front">
+                    <div class="card-image-section">
+                        <a href="../cars_html/car.html">
+                            <h1>See More</h1>
+                        </a>
+                    </div>
+
+                    <div class="car-specs-section">
+                        <ul>
+                            <li>Make: Chevrolet</li>
+                            <li>Model: Corvette</li>
+                            <li>Year: 1995</li>
+                            <li>Color: Red</li>
+                            <li>Price: $100/day</li>
+                            <li>Rental Type: Events, Driving</li>
+                            <li>Availability: Available</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-button-section">
+                        <button id="card-button-front" class="card-button-front">History</button>
+                    </div>
+                </div>
+
+                <div class="car-flip-card-back">
+
+                    <div class="card-back-text-section">
+                        <h1 class="card-back-heading">History</h1>
+
+                        <p class="card-back-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium voluptatibus nobis corporis similique repellat autem quas soluta iste repellendus fugit veritatis quis, commodi temporibus aspernatur neque placeat id atque modi?</p>
+                    </div>
+
+                    <div class="card-button-section">
+                        <button id="card-button-back" class="card-button-back">Car Specs</button>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+
+        <div class="car-collection-cards-wrapper">
+            <div class="car-flip-card">
+                <div class="car-flip-card-front">
+                    <div class="card-image-section">
+                        <a href="../cars_html/car.html">
+                            <h1>See Details</h1>
+                        </a>
+                    </div>
+
+                    <div class="car-specs-section">
+                        <ul>
+                            <li>Make: Chevrolet</li>
+                            <li>Model: Corvette</li>
+                            <li>Year: 1995</li>
+                            <li>Color: Red</li>
+                            <li>Price: $100/day</li>
+                            <li>Rental Type: Events, Driving</li>
+                            <li>Availability: Available</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-button-section">
+                        <button id="card-button-front" class="card-button-front">See History</button>
+                    </div>
+                </div>
+
+                <div class="car-flip-card-back">
+
+                    <div class="card-back-text-section">
+                        <h1 class="card-back-heading">History</h1>
+
+                        <p class="card-back-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium voluptatibus nobis corporis similique repellat autem quas soluta iste repellendus fugit veritatis quis, commodi temporibus aspernatur neque placeat id atque modi?</p>
+                    </div>
+
+                    <div class="card-button-section">
+                        <button id="card-button-back" class="card-button-back">See Info</button>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+
+        <div class="car-collection-cards-wrapper">
+            <div class="car-flip-card">
+                <div class="car-flip-card-front">
+                    <div class="card-image-section">
+                        <a href="../cars_html/car.html">
+                            <h1>See Details</h1>
+                        </a>
+                    </div>
+
+                    <div class="car-specs-section">
+                        <ul>
+                            <li>Make: Chevrolet</li>
+                            <li>Model: Corvette</li>
+                            <li>Year: 1995</li>
+                            <li>Color: Red</li>
+                            <li>Price: $100/day</li>
+                            <li>Rental Type: Events, Driving</li>
+                            <li>Availability: Available</li>
+                        </ul>
+                    </div>
+
+                    <div class="card-button-section">
+                        <button id="card-button-front" class="card-button-front">See History</button>
+                    </div>
+                </div>
+
+                <div class="car-flip-card-back">
+
+                    <div class="card-back-text-section">
+                        <h1 class="card-back-heading">History</h1>
+
+                        <p class="card-back-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium voluptatibus nobis corporis similique repellat autem quas soluta iste repellendus fugit veritatis quis, commodi temporibus aspernatur neque placeat id atque modi?</p>
+                    </div>
+
+                    <div class="card-button-section">
+                        <button id="card-button-back" class="card-button-back">See Info</button>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div> -->
+    </div>
+</div>
+
+<!-- JS files -->
+<script src="{% static 'javascript/car-card.js' %}"></script>
+
+{% endblock %}
+
+
+    

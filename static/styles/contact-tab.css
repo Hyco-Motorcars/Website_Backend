@@ -1,0 +1,21 @@
+.contact-tab-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #D2232A;
+    width: 100vw;
+    height: 70px;
+    box-shadow: inset 0px -26px 79px -8px rgba(0, 0, 0, 0.58);
+    z-index: 0;
+}
+
+.contact-tab-wrapper > .contact-tab-container {
+    width: 1000px;
+}
+
+.contact-tab-wrapper > .contact-tab-container h1 {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+}

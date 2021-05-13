@@ -1,0 +1,148 @@
+.car-list-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/background/land_rover.jpg);
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.car-list-section > .car-list-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 1500px;
+    height: 100%;
+    margin: 50px 0px;
+    grid-gap: 50px;
+}
+
+.car-collection-cards-wrapper {
+    width: 300px;
+    height: 550px;
+    perspective: 1000px;
+    z-index: 0;
+}
+
+.car-collection-cards-wrapper > .car-flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.car-flip-card-front, .car-flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.car-flip-card-front {
+    background-color: #F4F3F3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 10px 8px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+.car-flip-card-back {
+    background-color: #F4F3F3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 10px 8px 6px 0px rgba(0, 0, 0, 0.2);
+    transform: rotateY(180deg);
+}
+
+.car-flip-card-back > .card-back-text-section {
+    margin: 20px 10px;
+}
+
+.car-flip-card-back > .card-back-text-section > .card-back-heading {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.car-flip-card-back > .card-back-text-section > .card-back-text {
+    margin: 0px 20px;
+}
+
+.car-flip-card-front > .card-image-section {
+    margin-top: 20px;
+}
+
+.car-flip-card-front > .card-image-section a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 260px;
+    height: 260px;
+    background-image: url(../images/background/land_rover.jpg);
+    background-position: center;
+    background-size: 260px 260px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.car-flip-card-front > .card-image-section a h1 {
+    color: white;
+    font-size: 3em;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.car-flip-card-front > .card-image-section a:hover {
+    box-shadow: inset 0px -23px 100px 0px rgba(0, 0, 0, 1);
+}
+
+.car-flip-card-front > .card-image-section a:hover h1 {
+    opacity: 1;
+}
+
+.car-flip-card-front > .car-specs-section {
+    display: flex;
+    align-items: center;
+    width: 260px;
+    height: 100%;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.car-flip-card-front > .car-specs-section ul {
+    list-style-type: none;
+}
+
+
+/* Card Button */
+.card-button-section {
+    width: 80px;
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+.card-button-section > .card-button-front, .card-button-back {
+    width: 100%;
+    height: 100%;
+    background-color: #F4F3F3;
+    color: black;
+    border: 1px solid black;
+    border-radius: 2px;
+    outline: none;
+    transition: 0.2s;
+    cursor: pointer;
+    box-shadow: inset 0px -10px 30px -8px rgba(0, 0, 0, 0.58);
+}
+
+.card-button-section > .card-button-front:active, .card-button-back:active {
+    box-shadow: inset 0px -30px 30px -8px rgba(0, 0, 0, 0.58);
+}
+

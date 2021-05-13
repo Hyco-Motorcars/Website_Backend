@@ -1,0 +1,41 @@
+{% load static %}
+<!-- Heading Bar -->
+<div class="navigation-wrapper">
+
+    <div class="left-column">
+        <div class="logo-image-main">
+            <img src="{% static 'images/logos/HYCO_MOTORS_circle_MDK.png' %}" alt="Logo">
+        </div>
+    </div>
+
+    <div class="right-column">
+
+        <div class="nav-btn">
+            <a href="#" id="btn-menu-open" class="btn-open">
+                <i class="fas fa-bars"></i>
+            </a>
+
+            <a href="#" id="btn-menu-close" class="btn-close">
+                <i class="fas fa-times-circle"></i>
+            </a>
+
+            <div id="dropdown-menu" class="menu-contents">
+                <a href="{% url 'homepage' %}">Home</a>
+                <a href="{% url 'vehicle-sales' %}">Vehicle Sales</a>
+                <a href="storage.html">Storage</a>
+                <a href="detailing_paint.html">Detailing/Paint Correction</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        
+
+    </div>
+
+</div>
+
+<!-- JS files -->
+<script src="{% static 'javascript/nav-responsive.js' %}"></script>
+
+
+
