@@ -1,0 +1,95 @@
+.navigation-wrapper {
+    height: 190px;
+    background-color: #F4F3F3;
+    color: #cbcbcb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: inset 0px -26px 79px -8px rgba(0, 0, 0, 0.58);
+}
+
+.navigation-wrapper > .left-column > .logo-image-main {
+    padding: 20px 80px;
+}
+
+.navigation-wrapper > .left-column > .logo-image-main img {
+    width: 180px;
+    height: 100%;
+}
+
+/* Nav menu styles */
+
+.navigation-wrapper > .right-column {
+    margin: 0px 150px;
+}
+
+.menu-contents {
+    width: 30vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-contents li {
+    display: block;
+    background-color: transparent;
+    padding: 10px 10px;
+    border-radius: 2px;
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s;
+    font-family: 'Roboto Condensed', sans-serif;
+    position: relative;
+}
+
+.menu-contents > li a {
+    text-decoration: none;
+    font-size: 1.3em;
+    color: black;
+}
+
+.menu-contents > li:hover {
+    box-shadow: inset 0px -5px 27px -8px rgba(0, 0, 0, 0.58);
+}
+
+.menu-contents > li:hover a {
+    color: #cea135;
+}
+
+.dropdown {
+    position: absolute;
+    width: 150px;
+    font-size: 1rem;
+    z-index: 2;
+    background-color: #F4F3F3;
+    box-shadow: inset 0px -5px 27px -8px rgba(0, 0, 0, 0.58);
+    top: 48px;
+    left: 0px;
+    border-radius: 5px;
+    border: black 1px solid;
+    visibility: hidden;
+}
+
+.dropdown li {
+    margin: 10px 0px;
+}
+
+.dropdown li a {
+    color: black;
+}
+
+.menu-contents > li:hover .dropdown {
+    visibility: visible;
+}
+
+.menu-contents > li:hover .subtag {
+    color: black;
+}
+
+.menu-contents > li:hover .subtag:hover {
+    color: #cea135;
+}
+
+
+
+

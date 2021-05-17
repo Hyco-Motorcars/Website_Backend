@@ -8,7 +8,7 @@
         </div>
     </div>
 
-    <div class="right-column">
+    <!-- <div class="right-column">
 
         <div class="nav-btn">
             <a href="#" id="btn-menu-open" class="btn-open">
@@ -30,9 +30,30 @@
         </div>
         
 
+    </div> -->
+
+    <div class="right-column">
+        <ul class="menu-contents">
+            <li><a href="{% url 'homepage' %}">Home</a></li>
+            <li><a href="{% url 'vehicle-sales' %}">Vehicle Sales</a></li>
+            <li><a href="#">Rentals</a>
+                <ul class="dropdown">
+                    <li><a class="subtag" href="#">Collection 1</a></li>
+                    <li><a class="subtag" href="#">Collection 2</a></li>
+                    <li><a class="subtag" href="#">Collection 3</a></li>
+                    <li><a class="subtag" href="#">Collection 4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
     </div>
 
 </div>
+
+
+
 
 <!-- JS files -->
 <script src="{% static 'javascript/nav-responsive.js' %}"></script>

@@ -18,6 +18,7 @@
     height: 100%;
     margin: 50px 0px;
     grid-gap: 50px;
+    justify-content: center;
 }
 
 .car-collection-cards-wrapper {
@@ -145,4 +146,6 @@
 .card-button-section > .card-button-front:active, .card-button-back:active {
     box-shadow: inset 0px -30px 30px -8px rgba(0, 0, 0, 0.58);
 }
+
+
 

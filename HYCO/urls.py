@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 
 from pages.views import homepage_view, vehicle_sales_view
 
@@ -22,4 +24,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', homepage_view, name='homepage'),
     path('vehicle-sales/', vehicle_sales_view, name='vehicle-sales')
-]
+]#+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

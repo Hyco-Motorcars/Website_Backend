@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.fields.files import ImageFileDescriptor
 
 # Create your models here.
 class Vehicle(models.Model):
@@ -8,6 +9,7 @@ class Vehicle(models.Model):
     model          = models.CharField(max_length=120)
     VIN            = models.CharField(max_length=120)
     purchase_price = models.DecimalField(decimal_places=2, max_digits=1000, blank=True, null=True)
+    for_sale       = models.BooleanField(default=True)
     listing_price  = models.DecimalField(decimal_places=2, max_digits=1000, blank=True, null=True, default=50000)
     exterior_color = models.TextField(blank=True, null=True, default='Black')
     interior       = models.TextField(blank=True, null=True, default='Beige')
@@ -27,5 +29,11 @@ class Vehicle(models.Model):
     audio_system   = models.TextField(blank=True, null=True, default='Stock')
     cooling_system = models.BooleanField(blank=True, null=True, default=True)
     heating_system = models.BooleanField(blank=True, null=True, default=True)
+    image          = models.ImageField(blank=True, null=True, upload_to="images")
+    
 
-
+# class Image(models.Model):
+#     name = models.CharField(max_length=255)
+#     image = models.ImageField(upload_to='static/images/')
+#     vehicle = models.ForeignKey(Vehicle, on_delete=models.CASCADE)
+#     default = models.BooleanField(default=False)
