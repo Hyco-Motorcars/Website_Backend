@@ -36,7 +36,7 @@
         <ul class="menu-contents">
             <li><a href="{% url 'homepage' %}">Home</a></li>
             <li><a href="{% url 'vehicle-sales' %}">Vehicle Sales</a></li>
-            <li><a href="#">Rentals</a>
+            <li class="dropdown-menu" id="dropdown-sub-menu"><a href="#">Rentals</a>
                 <ul class="dropdown">
                     <li><a class="subtag" href="#">Collection 1</a></li>
                     <li><a class="subtag" href="#">Collection 2</a></li>
@@ -56,7 +56,7 @@
 
 
 <!-- JS files -->
-<script src="{% static 'javascript/nav-responsive.js' %}"></script>
+<script src="{% static 'javascript/nav.js' %}"></script>
 
 
 

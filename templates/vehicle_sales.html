@@ -63,11 +63,11 @@
         <div class="car-details-modal" id="details-modal">
             <div class="car-details-modal-content">
                 <div class="modal-header">
-                    <span class="close">&times;</span>
+                    <span class="close"><i class="far fa-times-circle"></i></span>
                 </div>
                 
                 <div class="modal-body">
-                    <p>Modal body</p>
+                    {% include 'image_carousel.html' %}
                 </div>
             </div>
         </div>
@@ -79,6 +79,7 @@
 <!-- JS files -->
 <script src="{% static 'javascript/car-card.js' %}"></script>
 <script src="{% static 'javascript/car-details-modal.js' %}"></script>
+
 
 {% endblock %}
 

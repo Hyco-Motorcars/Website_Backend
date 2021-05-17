@@ -44,8 +44,10 @@
 
 .menu-contents > li a {
     text-decoration: none;
+    font-family: 'Oleo Script', cursive;
     font-size: 1.3em;
     color: black;
+    font-weight: 800;
 }
 
 .menu-contents > li:hover {
@@ -68,6 +70,7 @@
     border-radius: 5px;
     border: black 1px solid;
     visibility: hidden;
+    opacity: 0;
 }
 
 .dropdown li {
