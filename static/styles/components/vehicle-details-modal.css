@@ -1,0 +1,113 @@
+/* Car details modal */
+.car-details-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    box-shadow: inset 0px -10px 30px -8px rgba(0, 0, 0, 0.58);
+}
+
+.car-details-modal > .car-details-modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 810px;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    box-shadow: inset 0px -10px 30px -8px rgba(0, 0, 0, 0.58);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 16px;
+    background-color: #888;
+    color: #D2232A;
+}
+
+/* .modal-body {padding: 2px 16px;} */
+
+.close {
+    color: #D2232A;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: #cea135;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
+
+/* Info section */
+.modal-info-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    background-color: #888;
+    padding: 20px 0px;
+}
+
+.modal-info-wrapper > .modal-specs-section {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 30%;
+}
+
+.modal-info-wrapper > .modal-specs-section > .specs-titles li {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    margin: 5px 0px;
+    width: 140px;
+    font-weight: 800;
+    border-bottom: solid 1px black;
+    border-right: solid 0px black;
+}
+
+.modal-info-wrapper > .modal-specs-section > .specs-titles li i {
+    width: 30px;
+}
+
+.modal-info-wrapper > .modal-specs-section > .specs-data {
+    margin: 0px 15px;
+}
+
+.modal-info-wrapper > .modal-specs-section > .specs-data li {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    margin: 5px 0px;
+    width: 140px;
+    font-weight: 800;
+}
+
+.modal-info-wrapper > .modal-specs-section ul {
+    font-size: 1.25em;
+    list-style: none;
+}
+
+.modal-info-wrapper > .modal-info-section {
+    width: 50%;
+}
+
+.modal-info-wrapper > .modal-info-section p {
+    font-family: 'Oleo Script', cursive;
+    font-size: 1.1em;
+    font-weight: 0;
+    margin: 2px;
+}

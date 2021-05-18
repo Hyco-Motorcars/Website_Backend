@@ -19,11 +19,11 @@
     <link rel="stylesheet" href="{% static 'styles/common.css' %}">
     <link rel="stylesheet" href="{% static 'styles/homepage.css' %}">
     <link rel="stylesheet" href="{% static 'styles/vehicle-sales.css' %}">
-    <link rel="stylesheet" href="{% static 'styles/vehicle-details-modal.css' %}">
-    <link rel="stylesheet" href="{% static 'styles/nav_new.css' %}">
-    <link rel="stylesheet" href="{% static 'styles/contact-tab.css' %}">
-    <link rel="stylesheet" href="{% static 'styles/footer.css' %}">
-    <link rel="stylesheet" href="{% static 'styles/image-carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/components/vehicle-details-modal.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/components/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/components/contact-tab.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/components/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/components/image-carousel.css' %}">
 
 
     {% block head_content %}
@@ -36,10 +36,10 @@
 <body>
 
     <!-- Include nav menu -->
-    {% include 'nav.html' %}
+    {% include 'components/nav.html' %}
 
     <!-- Include contact tab -->
-    {% include 'contact_tab.html' %}
+    {% include 'components/contact_tab.html' %}
 
     <!-- Main body content -->
     {% block content %}
@@ -49,7 +49,7 @@
     {% endblock %}
 
     <!-- Include footer -->
-    {% include 'footer.html' %}
+    {% include 'components/footer.html' %}
     
 </body>
 </html>

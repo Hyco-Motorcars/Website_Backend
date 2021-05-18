@@ -1,0 +1,50 @@
+{% load static %}
+
+
+<div class="car-details-modal" id="details-modal">
+    <div class="car-details-modal-content">
+        <div class="modal-header">
+            <div class="modal-title">
+                <h1>2006 Jeep Grand Cherokee</h1>
+            </div>
+            <div class="close"><i class="far fa-times-circle"></i></div>
+        </div>
+        
+        <div class="modal-body">
+            {% include 'components/image_carousel.html' %}
+
+            <div class="modal-info-wrapper">
+                <div class="modal-specs-section">
+                    <div class="specs-titles">
+                        <ul>
+                            <li><i class="fas fa-car"></i>&nbsp Make: {{ vehicle.make }}</li>
+                            <li><i class="fas fa-cogs"></i>&nbsp Model: {{ vehicle.model }}</li>
+                            <li><i class="fas fa-history"></i>&nbsp Year: {{ vehicle.year }}</li>
+                            <li><i class="fas fa-fill-drip"></i>&nbsp Color: {{ vehicle.exterior_color }}</li>
+                            <li><i class="fas fa-magic"></i>&nbsp Interior: {{ vehicle.interior }}</li>
+                            <li><i class="fas fa-dollar-sign"></i>&nbsp Price: {{ vehicle.listing_price }}</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="specs-data">
+                        <ul>
+                            <li>Jeep {{ vehicle.make }}</li>
+                            <li>Grand Cherokee{{ vehicle.model }}</li>
+                            <li>2006 {{ vehicle.year }}</li>
+                            <li>Silver {{ vehicle.exterior_color }}</li>
+                            <li>Gray Leather{{ vehicle.interior }}</li>
+                            <li>$30,000{{ vehicle.listing_price }}</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="modal-info-section">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas odit voluptates, et non voluptas repudiandae perferendis hic. Id, repudiandae eaque. Dignissimos numquam corrupti quod, vero unde, magnam ipsa laboriosam harum illo delectus veritatis quo culpa inventore porro quas alias! Iure!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JS files -->
+<script src="{% static 'javascript/car-details-modal.js' %}"></script>

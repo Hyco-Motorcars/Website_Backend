@@ -23,7 +23,7 @@
             <div class="car-flip-card">
                 <div class="car-flip-card-front">
                     <div class="card-image-section">
-                        <a class="details-button" id="details-button-id" href=#>
+                        <a class="details-button" id="details-button-id-{{ forloop.counter }}" href=#>
                             <h1>See Details</h1>
                         </a>
                     </div>
@@ -40,7 +40,7 @@
                     </div>
 
                     <div class="card-button-section">
-                        <button id="card-button-front" class="card-button-front">See History</button>
+                        <button id="card-button-front-{{ forloop.counter }}" class="card-button-front">See History</button>
                     </div>
                 </div>
 
@@ -53,24 +53,14 @@
                     </div>
 
                     <div class="card-button-section">
-                        <button id="card-button-back" class="card-button-back">See Info</button>
+                        <button id="card-button-back-{{ forloop.counter }}" class="card-button-back">See Info</button>
                     </div>
                 </div>
             </div>  
         </div>
         {% endfor %}
 
-        <div class="car-details-modal" id="details-modal">
-            <div class="car-details-modal-content">
-                <div class="modal-header">
-                    <span class="close"><i class="far fa-times-circle"></i></span>
-                </div>
-                
-                <div class="modal-body">
-                    {% include 'image_carousel.html' %}
-                </div>
-            </div>
-        </div>
+        {% include 'components/car_details_modal.html' %}
         
     </div>
 
@@ -78,7 +68,6 @@
 
 <!-- JS files -->
 <script src="{% static 'javascript/car-card.js' %}"></script>
-<script src="{% static 'javascript/car-details-modal.js' %}"></script>
 
 
 {% endblock %}
