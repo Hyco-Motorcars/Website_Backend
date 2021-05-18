@@ -1,11 +1,11 @@
 {% load static %}
 
 
-<div class="car-details-modal" id="details-modal">
+<div class="car-details-modal" id="details-modal-{{ forloop.counter }}">
     <div class="car-details-modal-content">
         <div class="modal-header">
             <div class="modal-title">
-                <h1>2006 Jeep Grand Cherokee</h1>
+                <h1>{{vehicle.year}} {{vehicle.make}} {{vehicle.model}}</h1>
             </div>
             <div class="close"><i class="far fa-times-circle"></i></div>
         </div>
@@ -17,23 +17,23 @@
                 <div class="modal-specs-section">
                     <div class="specs-titles">
                         <ul>
-                            <li><i class="fas fa-car"></i>&nbsp Make: {{ vehicle.make }}</li>
-                            <li><i class="fas fa-cogs"></i>&nbsp Model: {{ vehicle.model }}</li>
-                            <li><i class="fas fa-history"></i>&nbsp Year: {{ vehicle.year }}</li>
-                            <li><i class="fas fa-fill-drip"></i>&nbsp Color: {{ vehicle.exterior_color }}</li>
-                            <li><i class="fas fa-magic"></i>&nbsp Interior: {{ vehicle.interior }}</li>
-                            <li><i class="fas fa-dollar-sign"></i>&nbsp Price: {{ vehicle.listing_price }}</li>
+                            <li><i class="fas fa-car"></i>&nbsp Make:</li>
+                            <li><i class="fas fa-cogs"></i>&nbsp Model:</li>
+                            <li><i class="fas fa-history"></i>&nbsp Year:</li>
+                            <li><i class="fas fa-fill-drip"></i>&nbsp Color:</li>
+                            <li><i class="fas fa-magic"></i>&nbsp Interior:</li>
+                            <li><i class="fas fa-dollar-sign"></i>&nbsp Price:</li>
                         </ul>
                     </div>
                     
                     <div class="specs-data">
                         <ul>
-                            <li>Jeep {{ vehicle.make }}</li>
-                            <li>Grand Cherokee{{ vehicle.model }}</li>
-                            <li>2006 {{ vehicle.year }}</li>
-                            <li>Silver {{ vehicle.exterior_color }}</li>
-                            <li>Gray Leather{{ vehicle.interior }}</li>
-                            <li>$30,000{{ vehicle.listing_price }}</li>
+                            <li>{{ vehicle.make }}</li>
+                            <li>{{ vehicle.model }}</li>
+                            <li>{{ vehicle.year }}</li>
+                            <li>{{ vehicle.exterior_color }}</li>
+                            <li>{{ vehicle.interior }}</li>
+                            <li>{{ vehicle.listing_price }}</li>
                         </ul>
                     </div>
                 </div>

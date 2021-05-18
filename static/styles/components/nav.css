@@ -74,6 +74,7 @@
     border: black 1px solid;
     visibility: hidden;
     opacity: 0;
+    transition: all 0.3s;
 }
 
 .dropdown li {
@@ -84,8 +85,9 @@
     color: black;
 }
 
-.menu-contents > li:hover .dropdown {
+.menu-contents > .dropdown-menu:hover .dropdown {
     visibility: visible;
+    opacity: 1;
 }
 
 .menu-contents > li:hover .subtag {

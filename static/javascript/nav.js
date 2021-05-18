@@ -12,12 +12,13 @@ function ShowSubMenu(event) {
 
 }
 
-window.onclick = function(event) {
+window.onmouseover = function(event) {
     var SubMenuBlock = document.getElementsByClassName("dropdown")[0];
 
-    if (event.target != SubMenuBlock) {
+    if (event.target != SubMenuBlock && event.target != DropdownMenu) {
         var speed = 0.1;
-        fadeOut(SubMenuBlock,speed);
+        SubMenuBlock.style.visibility = "hidden";
+        //fadeOut(SubMenuBlock,speed);
     }
 }
 

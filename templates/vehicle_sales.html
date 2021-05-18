@@ -40,7 +40,7 @@
                     </div>
 
                     <div class="card-button-section">
-                        <button id="card-button-front-{{ forloop.counter }}" class="card-button-front">See History</button>
+                        <button class="card-button-front">See History</button>
                     </div>
                 </div>
 
@@ -53,14 +53,15 @@
                     </div>
 
                     <div class="card-button-section">
-                        <button id="card-button-back-{{ forloop.counter }}" class="card-button-back">See Info</button>
+                        <button class="card-button-back">See Info</button>
                     </div>
                 </div>
             </div>  
         </div>
-        {% endfor %}
 
         {% include 'components/car_details_modal.html' %}
+
+        {% endfor %}
         
     </div>
 
