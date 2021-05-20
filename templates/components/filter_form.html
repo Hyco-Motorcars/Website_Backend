@@ -1,0 +1,85 @@
+{% load static %}
+
+
+<div class="filter-form-wrapper">
+    <div class="filter-form-heading">
+        <h1>Filter Inventory</h1>
+    </div>
+    
+    <form class="filter-form-content" method="GET" action=".">
+    
+        <div class="form-group">
+            <select name="searchmake" id="vehiclemake">
+                <option value="make">Select Make</option>
+                <option value="adventure-trailers">Adventure Trailers</option>
+                <option value="airstream">Airstream</option>
+                <option value="alpha-romeo">Alpha Romeo</option>
+                <option value="aston-martin">Aston Martin</option>
+                <option value="austin">Austin</option>
+                <option value="austin-healey">Austin-Healey</option>
+                <option value="bentley">Bentley</option>
+                <option value="bmw">BMW</option>
+                <option value="cadillac">Cadillac</option>
+                <option value="chevrolet">Chevrolet</option>
+                <option value="chrysler">Chrysler</option>
+                <option value="datsun">Datsun</option>
+                <option value="dodge">Dodge</option>
+                <option value="ford">Ford</option>
+                <option value="jaguar">Jaguar</option>
+                <option value="jeep">Jeep</option>
+                <option value="land-rover">Land Rover</option>
+                <option value="maserati">Maserati</option>
+                <option value="mercedes-benz">Mercedes Benz</option>
+                <option value="mg">MG</option>
+                <option value="morgan">Morgan</option>
+                <option value="porsche">Porsche</option>
+                <option value="rolls-royce">Rolls Royce</option>
+                <option value="steyr-puch">Steyr-Puch</option>
+                <option value="superperformance">Superperformance</option>
+                <option value="toyota">Toyota</option>
+                <option value="triumph">Triumph</option>
+                <option value="volvo">Volvo</option>
+                
+            </select>
+        </div>
+    
+        <div class="form-group">
+            <input type="text" id="vehiclemodel" placeholder="Model" name="searchmodel">
+            <label for="vehiclemodel">Model</label>
+        </div>
+    
+        <div class="form-group">
+            <input type="text" id="vehicleyear" placeholder="Year" name="searchyear">
+            <label for="vehicleyear">Year</label>
+        </div>
+    
+        <div class="form-group">
+            <input type="text" id="vehicleexteriorcolor" placeholder="Exterior Color" name="searchexterior">
+            <label for="vehicleexteriorcolor">Exterior Color</label>
+        </div>
+    
+        <div class="form-group">
+            <input type="text" id="vehicleinteriorcolor" placeholder="Interior Color" name="searchinterior">
+            <label for="vehicleinteriorcolor">Interior Color</label>
+        </div>
+    
+        <div class="form-group">
+            <input type="text" id="maxprice" placeholder="Max Price" name="searchmaxprice">
+            <label for="maxprice">Max Price</label>
+        </div>
+    
+        <div class="form-group">
+            <input type="text" id="minprice" placeholder="Min Price" name="searchminprice">
+            <label for="minprice">Min Price</label>
+        </div>
+
+        <div class="send-btn-wrapper">
+            <button type="submit" class="btn">
+                <i class="fas fa-cog"></i>
+                Search
+            </button>
+        </div>
+    
+    
+    </form>
+</div>

@@ -14,13 +14,16 @@ h1, h2, h3, h4 {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 70px;
+    background-color: #F4F3F3;
+    box-shadow: inset 0px -26px 79px -8px rgba(0, 0, 0, 0.58);
 }
 
 .body-heading-wrapper > .heading-tab {
-    width: 1000px;
+    width: 1500px;
     height: 100%;
     padding: 40px 0px;
-    margin-top: 70px;
+    color: #D2232A;
 }
 
 .body-heading-wrapper-collection {
@@ -74,5 +77,28 @@ h1, h2, h3, h4 {
     color: white;
     font-size: 1.25em;
 }
+
+.spacer40 {
+    height: 40px;
+    width: 100%;
+}
+
+.construction-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 100%;
+}
+
+.construction-wrapper > .construction-notice {
+    width: 800px;
+    text-align: center;
+}
+
+.construction-wrapper > .construction-notice h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
 
 

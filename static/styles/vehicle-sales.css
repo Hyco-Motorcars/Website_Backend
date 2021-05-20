@@ -1,7 +1,7 @@
 .car-list-section {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    align-items: flex-start;
     background-image: url(../images/background/land_rover.jpg);
     height: 100%;
     background-attachment: fixed;
@@ -12,9 +12,9 @@
 
 .car-list-section > .car-list-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    width: 1500px;
+    width: 1200px;
     height: 100%;
     margin: 50px 0px;
     grid-gap: 50px;
@@ -120,6 +120,17 @@
 
 .car-flip-card-front > .car-specs-section ul {
     list-style-type: none;
+}
+
+.car-flip-card-front > .car-specs-section ul li {
+    color: black;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 1.25em;
+}
+
+.car-flip-card-front > .car-specs-section ul li i {
+    width: 25px;
+    margin: 0px 10px;
 }
 
 

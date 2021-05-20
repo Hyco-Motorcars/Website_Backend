@@ -16,6 +16,11 @@
 </div>
 
 <div class="car-list-section">
+
+
+    {% include 'components/filter_form.html' %}
+
+
     <div class="car-list-grid">
 
         {% for vehicle in all_vehicles %}
@@ -30,12 +35,12 @@
 
                     <div class="car-specs-section">
                         <ul>
-                            <li>Make: {{ vehicle.make }}</li>
-                            <li>Model: {{ vehicle.model }}</li>
-                            <li>Year: {{ vehicle.year }}</li>
-                            <li>Color: {{ vehicle.exterior_color }}</li>
-                            <li>Interior: {{ vehicle.interior }}</li>
-                            <li>Price: {{ vehicle.listing_price }}</li>
+                            <li><i class="fas fa-car"></i>Make: {{ vehicle.make }}</li>
+                            <li><i class="fas fa-cogs"></i>Model: {{ vehicle.model }}</li>
+                            <li><i class="fas fa-history"></i>Year: {{ vehicle.year }}</li>
+                            <li><i class="fas fa-fill-drip"></i>Color: {{ vehicle.exterior_color }}</li>
+                            <li><i class="fas fa-magic"></i>Interior: {{ vehicle.interior }}</li>
+                            <li><i class="fas fa-dollar-sign"></i>Price: {{ vehicle.listing_price }}</li>
                         </ul>
                     </div>
 

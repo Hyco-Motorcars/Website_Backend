@@ -1,0 +1,104 @@
+.filter-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 400px;
+    margin: 50px 0px;
+}
+
+.filter-form-heading {
+    text-align: center;
+    font-size: 2em;
+    width: 100%;
+    background-color: #D2232A;
+    color: white;
+    box-shadow: inset 0px -5px 27px -8px rgba(0, 0, 0, 0.58);
+    border-radius: 5px;
+}
+
+.filter-form-heading h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.75em;
+    margin: 10px 0px;
+}
+
+.filter-form-content {
+    width: 100%;
+    background-color: #F4F3F3;
+    box-shadow: inset 0px -5px 27px -8px rgba(0, 0, 0, 0.58);
+    border-radius: 5px;
+}
+
+.filter-form-content > .form-group {
+    margin: 30px 20px;
+}
+
+.filter-form-content input {
+    font-size: 1em;
+    font-family: inherit;
+    color: inherit;
+    padding: 20px 20px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 3px solid #11122b;
+    width: 50%;
+    display: block;
+    transition: all 0.3s;
+}
+
+.filter-form-content input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #cea135;
+}
+
+.filter-form-content input::-webkit-input-placeholder, .form textarea::-webkit-input-placeholder {
+    color: #11122b;
+}
+
+.filter-form-content input:focus::-webkit-input-placeholder, .form textarea:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.filter-form-content label {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-left: 1rem;
+    margin-top: 0.2rem;
+    display: block;
+    transition: all 0.3s;
+    color: #D2232A;
+    Visibility: hidden;
+    opacity: 0;
+}
+
+.filter-form-content input:focus + label, .filter-form-content textarea:focus + label {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(.5rem);
+}
+
+.send-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.btn {
+    background-color: #F4F3F3;
+    color: black;
+    font-size: 1.25em;
+    padding: 10px 25px;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.5s;
+    box-shadow: inset 0px -15px 30px -8px rgba(0, 0, 0, 0.58);
+    cursor: pointer;
+}
+
+.btn:active {
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.4);
+}

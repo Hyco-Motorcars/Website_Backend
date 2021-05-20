@@ -1,0 +1,25 @@
+.about-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-wrapper > .about-section {
+    width: 1500px;
+    margin: 50px 0px;
+}
+
+.about-wrapper > .about-section p {
+    font-family: 'Ubuntu Condensed', cursive;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    line-height: 50px;
+    font-weight: 500;
+}
+
+.about-wrapper > .about-section #viper {
+    width: 300px;
+    margin: 25px 40px 20px 0px;
+    float: left;
+    /* border: 1px solid #cea135; */
+}
