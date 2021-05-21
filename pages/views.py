@@ -41,6 +41,12 @@ def vehicle_sales_view(request, *args, **kwargs):
     if vehicle_interior != '' and vehicle_interior != 'select interior color' and vehicle_interior is not None:
         vehicle_qs = vehicle_qs.filter(interior__icontains=vehicle_interior)
 
+    if vehicle_maxprice is not None:
+        vehicle_qs = vehicle_qs.filter(purchase_price__lte=vehicle_maxprice)
+
+    if vehicle_minprice is not None:
+        vehicle_qs = vehicle_qs.filter(purchase_price__gte=vehicle_minprice)
+
     context = {
         'all_vehicles' : vehicle_qs
     }
