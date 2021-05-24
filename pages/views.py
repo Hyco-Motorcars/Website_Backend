@@ -1,11 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from vehicles.models import Vehicle
+from vehicles.models import Vehicle, Image
 
 # Create your views here.
 def homepage_view(request, *args, **kwargs):
     obj = Vehicle.objects.get(id=7)
+    car_pics = Image.objects.select_related().filter(vehicle_image = 12)
 
     context = {
         'object': obj,
@@ -25,6 +26,7 @@ def vehicle_sales_view(request, *args, **kwargs):
     vehicle_maxprice = request.GET.get('searchmaxprice')
     vehicle_minprice = request.GET.get('searchminprice')
 
+
     if vehicle_make != '' and vehicle_make != 'select make' and vehicle_make is not None:
         print('inside loop')
         vehicle_qs = vehicle_qs.filter(make__icontains=vehicle_make)
@@ -42,9 +44,11 @@ def vehicle_sales_view(request, *args, **kwargs):
         vehicle_qs = vehicle_qs.filter(interior__icontains=vehicle_interior)
 
     if vehicle_maxprice is not None:
+        print(vehicle_maxprice)
         vehicle_qs = vehicle_qs.filter(purchase_price__lte=vehicle_maxprice)
 
     if vehicle_minprice is not None:
+        print(vehicle_minprice)
         vehicle_qs = vehicle_qs.filter(purchase_price__gte=vehicle_minprice)
 
     context = {

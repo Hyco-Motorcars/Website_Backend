@@ -28,4 +28,8 @@ urlpatterns = [
     path('rentals/', rentals_view, name='rentals'),
     path('storage/', storage_view, name='storage'),
     path('detailing/', detailing_view, name='detailing'),
-]#+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

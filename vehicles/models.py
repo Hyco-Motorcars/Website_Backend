@@ -1,5 +1,7 @@
 from django.db import models
+from django.db.models.deletion import CASCADE
 from django.db.models.fields.files import ImageFileDescriptor
+import uuid
 
 # Create your models here.
 class Vehicle(models.Model):
@@ -29,11 +31,12 @@ class Vehicle(models.Model):
     audio_system   = models.TextField(blank=True, null=True, default='Stock')
     cooling_system = models.BooleanField(blank=True, null=True, default=True)
     heating_system = models.BooleanField(blank=True, null=True, default=True)
-    image          = models.ImageField(blank=True, null=True, upload_to="images")
+    id             = models.CharField(primary_key=True, max_length=120, default=uuid.uuid4)
     
 
-# class Image(models.Model):
-#     name = models.CharField(max_length=255)
-#     image = models.ImageField(upload_to='static/images/')
-#     vehicle = models.ForeignKey(Vehicle, on_delete=models.CASCADE)
-#     default = models.BooleanField(default=False)
+class Image(models.Model):
+    image=models.ImageField(upload_to="images/")
+    default = models.BooleanField(default=False)
+    vehicle_image = models.ForeignKey(Vehicle, on_delete=CASCADE, blank=True, null=True, default=None)
+
+
