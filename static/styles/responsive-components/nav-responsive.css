@@ -1,0 +1,106 @@
+@media (max-width: 1000px) {
+    .navigation-wrapper > .right-column-responsive {
+        display: contents;
+    }
+
+    .navigation-wrapper > .right-column {
+        display: none;
+    }
+
+    .navigation-wrapper {
+        height: 190px;
+        box-shadow: inset 0px -26px 40px -8px rgba(0, 0, 0, 0.58);
+    }
+
+    .navigation-wrapper > .left-column > .logo-image-main {
+        padding: 20px 40px;
+    }
+
+    .navigation-wrapper > .left-column > .logo-image-main img {
+        width: 150px;
+        height: 100%;
+    }
+
+    /* Responsive nav styles */
+    .right-column-responsive > .btn-open {
+        position: relative;
+        font-size: 1.75em;
+        color: black;
+        background-color: transparent;
+        border: none;
+        text-decoration: none;
+        cursor: pointer;
+        transition: color 0.3s;
+        margin-right: 15%; 
+    }
+
+    .right-column-responsive > .btn-open:hover {
+        color: #cea135;
+    }
+
+    .menu-contents-responsive {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: absolute;
+        z-index: 1;
+        opacity: 1;
+    }
+
+    /* .menu-contents-responsive > .dropdown-menu-responsive > .dropdown-responsive {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }  */
+
+    /* .responsive-nav-menu-wrapper > .responsive-nav-menu-container {
+        width: 100vw;
+    } */
+
+    /* .responsive-nav-menu-wrapper > .responsive-nav-menu-container > .btn-close-responsive {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 50px;
+        text-decoration: none;
+        font-size: 2em;
+        color: #D2232A;
+        background-color: black;
+        transition: 0.3s color;
+    } */
+
+    /* .responsive-nav-menu-wrapper > .responsive-nav-menu-container > .btn-close-responsive:hover {
+        color: #cea135;
+    } */
+
+    /* .responsive-nav-menu-wrapper > .responsive-nav-menu-container > .btn-close-responsive i {
+        margin-right: 20px;
+    } */
+
+
+    /* .responsive-nav-menu-wrapper > .responsive-nav-menu-container > .menu-contents-responsive {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+    } */
+
+    /* .responsive-nav-menu-wrapper > .responsive-nav-menu-container > .menu-contents-responsive a {
+        display: block;
+        font-size: 3.5em;
+        text-decoration: none;
+        margin: 20px 0px;
+        color: white;
+        transition: 0.3s color;
+    } */
+
+    /* .responsive-nav-menu-wrapper > .responsive-nav-menu-container > .menu-contents-responsive a:hover {
+        color: #cea135;
+    } */
+
+        
+}

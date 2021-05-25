@@ -24,11 +24,9 @@ def vehicle_sales_view(request, *args, **kwargs):
     vehicle_exterior = request.GET.get('searchexterior')
     vehicle_interior = request.GET.get('searchinterior')
     vehicle_maxprice = request.GET.get('searchmaxprice')
-    vehicle_minprice = request.GET.get('searchminprice')
 
 
     if vehicle_make != '' and vehicle_make != 'select make' and vehicle_make is not None:
-        print('inside loop')
         vehicle_qs = vehicle_qs.filter(make__icontains=vehicle_make)
     
     if vehicle_model != '' and vehicle_model != 'select model' and vehicle_model is not None:
@@ -43,13 +41,9 @@ def vehicle_sales_view(request, *args, **kwargs):
     if vehicle_interior != '' and vehicle_interior != 'select interior color' and vehicle_interior is not None:
         vehicle_qs = vehicle_qs.filter(interior__icontains=vehicle_interior)
 
-    if vehicle_maxprice is not None:
-        print(vehicle_maxprice)
-        vehicle_qs = vehicle_qs.filter(purchase_price__lte=vehicle_maxprice)
+    if vehicle_maxprice != '' and vehicle_maxprice != 'select max price' and vehicle_maxprice is not None:
+        vehicle_qs = vehicle_qs.filter(listing_price__lte=vehicle_maxprice)
 
-    if vehicle_minprice is not None:
-        print(vehicle_minprice)
-        vehicle_qs = vehicle_qs.filter(purchase_price__gte=vehicle_minprice)
 
     context = {
         'all_vehicles' : vehicle_qs

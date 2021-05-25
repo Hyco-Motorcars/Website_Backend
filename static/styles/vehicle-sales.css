@@ -111,6 +111,7 @@
 
 .car-flip-card-front > .car-specs-section {
     display: flex;
+    justify-content: flex-start;
     align-items: center;
     width: 260px;
     height: 100%;
@@ -125,12 +126,25 @@
 .car-flip-card-front > .car-specs-section ul li {
     color: black;
     font-family: 'Ubuntu Condensed', sans-serif;
-    font-size: 1.25em;
+    font-size: 1.05em;
 }
 
 .car-flip-card-front > .car-specs-section ul li i {
     width: 25px;
     margin: 0px 10px;
+}
+
+.car-flip-card-front > .car-specs-section > .car-specs-data-section {
+    margin: 0px 10px;
+}
+
+.car-flip-card-front > .car-specs-section > .car-specs-data-section ul li {
+    margin-bottom: 1px;
+    font-weight: 800;
+}
+
+.car-flip-card-front > .car-specs-section > .car-specs-titles-section ul li {
+    border-bottom: solid 1px black;
 }
 
 

@@ -26,6 +26,10 @@
     margin: 0px 150px;
 }
 
+.navigation-wrapper > .right-column-responsive {
+    display: none;
+}
+
 .menu-contents {
     width: 30vw;
     display: flex;
