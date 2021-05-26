@@ -1,28 +1,26 @@
 var NavBtnOpen = document.getElementById("btn-menu-open-responsive");
 NavBtnOpen.addEventListener("click", ShowResponsiveMenu);
 
-var NavBtnClose = document.getElementById("btn-menu-close-responsive");
+var NavBtnClose = document.getElementById("btn-menu-close");
 NavBtnClose.addEventListener("click", HideResponsiveMenu);
+
+var MenuBlock = document.getElementsByClassName("menu-contents-responsive")[0];
 
 
 function ShowResponsiveMenu(event) {
 
-    var MenuBlock = document.getElementsByClassName("responsive-nav-menu-wrapper")[0];
-    var speed = 2.5;
-
-    MenuBlock.style.zIndex = "2";
-    MenuBlock.style.visibility = "visible";
-    fadeInResponsive(MenuBlock,speed);
+    speed = 0.5;
+    MenuBlock.style.display = 'flex';
+    fadeInResponsive(MenuBlock, speed);
 }
 
 function HideResponsiveMenu(event) {
 
-    var MenuBlock = document.getElementsByClassName("responsive-nav-menu-wrapper")[0];
-    var speed = 2.5;
+    speed = 0.5;
+    fadeOutResponsive(MenuBlock, speed);
 
-    fadeOut(MenuBlock,speed);
-    MenuBlock.style.zIndex = "0";
 }
+
 
 
 function fadeInResponsive(elem, speed) {
@@ -39,7 +37,7 @@ function fadeInResponsive(elem, speed) {
     }, speed);
 }
 
-function fadeOut(elem, speed) {
+function fadeOutResponsive(elem, speed) {
         
     var outInterval = setInterval(function(){
 
@@ -48,7 +46,7 @@ function fadeOut(elem, speed) {
         if (elem.style.opacity <= 0) {
 
             elem.style.opacity = 0;
-            elem.style.visibility = "hidden";
+            elem.style.display = "none";
             clearInterval(outInterval);
         }
     }, speed);
